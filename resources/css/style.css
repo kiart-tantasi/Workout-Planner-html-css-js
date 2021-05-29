@@ -11,7 +11,7 @@
 html {
     background-color: white;
     color: #000;
-    font-family: 'Arial', 'sans-serif';
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
@@ -27,8 +27,15 @@ h1 {
     margin-bottom: 40px;
 }
 
+button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+}
+
 /* ----------------------------------------------- */
-/* Header */
+/* Header*/
 /* ----------------------------------------------- */
 
 header {
@@ -38,6 +45,10 @@ header {
     height: 100vh;
 }
 
+header h1 {
+    margin-bottom: 60px;
+}
+
 .welcome {
     padding-top: 200px;
     text-align: center;
@@ -45,13 +56,15 @@ header {
 
 .btn:link,
 .btn:visited {
+    letter-spacing: 2px;
+    padding: 15px 20px;
     margin-top: 20px;
+    margin-right: 20px;
     color: #ffffff;
-    padding: 15px 10px;
-    display: inline-block;
+    font-size: 120%;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 5%;
+    background-color: #000;
+    border-radius: 30px;
     transition: background-color 1s;
 }
 
@@ -61,15 +74,16 @@ header {
     color: #000;
 }
 
+
+
 /* ----------------------------------------------- */
 /* Workout Shedule */
 /* ----------------------------------------------- */
 
 .section-schedule {
-    background-color: #e2e2e2;
     padding: 50px;
-    /* background-size: cover; */
     padding-left: 30%;
+    background-color: #F9F9F9;
 }
 
 .muscle-checkboxes {
@@ -83,18 +97,16 @@ header {
     margin-left: 10px;
 }
 
+.muscle-checkboxes button {
+    margin-top: 30px;
+}
+
 .schedule-result {
     visibility: hidden;
 }
 
 .section-schedule input {
     margin: 10px;
-}
-
-.section-schedule button {
-    margin-top: 20px;
-    padding: 5px;
-    display: block;
 }
 
 .section-schedule p,
@@ -110,38 +122,35 @@ span.rest {
     color: red;
 }
 
+.re-create {
+    margin-top: 15px;
+}
+
 /* ----------------------------------------------- */
 /* Calories */
 /* ----------------------------------------------- */
 
 .section-calories {
-    background-color: #b7b7b7;
+    background-color: #F2F2F2;
     padding: 50px;
-    /* height: 100vh; */
     padding-left: 30%;
+}
+
+.section-calories button {
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .input-calories input {
     margin-bottom: 20px;
 }
 
-.input-calories button {
-    display: inline-block;
-    margin-bottom: 30px;
-    padding: 5px;
+.food-note {
+    line-height: 200%;
+    margin-bottom: 20px;
 }
-
-.input-calories #food-note {
-    line-height: 180%;
-}
-
 .section-calories .cal-cal {
     visibility: hidden;
-}
-
-#calcal-btn {
-    margin: 30px 0;
-    padding: 5px;
 }
 
 .cal-cal h2 {

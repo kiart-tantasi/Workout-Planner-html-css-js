@@ -5,15 +5,17 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <title>Workout Schedule</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <title>Workout Schedule Planner</title>
         
     </head>
     
     <body>
         <header>
             <div class="welcome">
-                <h1>Welcome to the website</h1>
-                <a href="#" class="btn js--scroll-to-schedule">Create your Workout Schedule</a>
+                <h1>Plan Your Workout and Count Calories</h1>
+                <a href="#" class="btn js--scroll-to-schedule">Create Workout Schedule</a>
                 <a href="#" class="btn js--scroll-to-calories">Calculate Calories for Today</a>
             </div>
         </header>
@@ -42,7 +44,7 @@
             </div>
             
             <div class="schedule-result">
-                <h2>Here Your Schedule</h2>
+                <h2>Here's Your Schedule</h2>
                 <p><strong>Monday:</strong><span id="Monday"></span><br>
                     <strong>Tuesday:</strong><span id="Tuesday"></span><br>
                     <strong>Wednesday:</strong><span id="Wednesday"></span><br>
@@ -51,7 +53,7 @@
                     <strong>Saturday:</strong><span id="Saturday"></span><br>
                     <strong>Sunday:</strong><span id="Sunday"></span><br>
                 </p>
-                <button onclick=makeSchedule()>Re-Create</button>
+                <button onclick=makeSchedule() class="re-create">Re-Create</button>
             </div>
         </section>
 
@@ -65,7 +67,7 @@
                 <h2>Protein: </h2><input type="number" id="food-protein"><br>
                 <button onclick=addFood()>Add Food</button>
                 <button onclick=clearFood()>Clear</button>
-                <p><span id="food-note"></span></p>
+                <p class="food-note"><span></span></p>
             </div>
             
             <button id="calcal-btn" onclick=calCal()>Calculate Calories and Protein</button>

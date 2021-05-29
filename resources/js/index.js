@@ -3,6 +3,14 @@
 //------------------//
 
 const makeSchedule = () => {
+    setTimeout(() => {
+        planWorkout();
+    }, 300);
+}
+
+const planWorkout = () => {
+
+
 
     //make an array for the muscles that are checked on checkboxes.
     const muscleArray = ['Chest','Back','Legs','Shoulder','Biceps','Triceps','Abs'];
@@ -17,7 +25,7 @@ const makeSchedule = () => {
 
     //In case that no muscle is checked
     if (muscleArray.length <= 0) {
-        alert("Please check at least one muscle for the schedule.");
+        alert("Please Select At Least One Muscle");
     }
 
     //there is some muscle checked.
@@ -110,24 +118,34 @@ let foodNote = "";
 const addFood = () => {
 
     //not all blanks are filled.
-    if (document.querySelector("#food-name").value == ""|| document.querySelector("#food-calories").value == "" || document.querySelector("#food-protein").value =="") {
-        alert("Please fill in all the blanks");
+    if (document.querySelector("#food-name").value == "") {
+        alert("Menu Name missed");
     }
 
     else {
 
         //adding an element into foodArray with properties.
+        const nameInput = document.querySelector("#food-name").value;
+        const calInput = document.querySelector("#food-calories").value;
+        const proteinInput = document.querySelector("#food-protein").value;
         foodArray[counter] = {name: "", calories: 0, protein: 0};
-        foodArray[counter].name = document.querySelector("#food-name").value;
-        foodArray[counter].calories = parseInt(document.querySelector("#food-calories").value);
-        foodArray[counter].protein = parseInt(document.querySelector("#food-protein").value);
-        counter++
+        foodArray[counter].name = nameInput;
+        if (calInput != "") {
+            foodArray[counter].calories = parseInt(calInput);
+        }
+        if (proteinInput != "") {
+            foodArray[counter].protein = parseInt(proteinInput);
+        }
+
+        
 
         //making a note of all food taken
-        foodNote = foodNote + "<strong>Menu:</strong> "+ document.querySelector("#food-name").value +
-        ", <strong>Calories:</strong> " + document.querySelector("#food-calories").value +
-        ", <strong>Protein:</strong> " + document.querySelector("#food-protein").value + "<br>";
-        document.querySelector(".input-calories span").innerHTML = foodNote;
+        foodNote = foodNote + "<strong>Menu:</strong> "+ foodArray[counter].name +
+        ", <strong>Calories:</strong> " + foodArray[counter].calories +
+        ", <strong>Protein:</strong> " + foodArray[counter].protein + "<br>";
+        document.querySelector(".food-note span").innerHTML = foodNote;
+
+        counter++
 
         //clear the blank
         document.querySelector("#food-name").value = "";
