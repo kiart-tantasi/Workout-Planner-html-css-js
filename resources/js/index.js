@@ -25,7 +25,7 @@ const planWorkout = () => {
 
     //In case that no muscle is checked
     if (muscleArray.length <= 0) {
-        alert("Please Select At Least One Muscle");
+        alert("Please Select at least One Muscle.");
     }
 
     //there is some muscle checked.
@@ -119,7 +119,7 @@ const addFood = () => {
 
     //not all blanks are filled.
     if (document.querySelector("#food-name").value == "") {
-        alert("Menu Name missed");
+        alert("Menu Name missed.");
     }
 
     else {
