@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <title>Workout Schedule</title>
+        
+    </head>
+    
+    <body>
+        <header>
+            <div class="welcome">
+                <h1>Welcome to the website</h1>
+                <a href="#" class="btn js--scroll-to-schedule">Create your Workout Schedule</a>
+                <a href="#" class="btn js--scroll-to-calories">Calculate Calories for Today</a>
+            </div>
+        </header>
+        <section class="section-schedule js--schedule">
+            <h1>About your Schedule?</h1>
+            <div class="muscle-checkboxes">
+                <input type="checkbox" id="Chest">  Chest<br>
+                <input type="checkbox" id="Back">   Back<br>
+                <input type="checkbox" id="Legs"> Legs<br>
+                <input type="checkbox" id="Shoulder"> Shoulder<br>
+                <input type="checkbox" id="Biceps"> Biceps<br>
+                <input type="checkbox" id="Triceps"> Triceps<br>
+                <input type="checkbox" id="Abs"> Abs<br>
+                
+                <p>First Day of Schedule<select id="firstday">
+                    <option value="Monday" selected>Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select></p>
+                
+                <button onclick=makeSchedule()>Create Workout Schedule</button>
+            </div>
+            
+            <div class="schedule-result">
+                <h2>Here Your Schedule</h2>
+                <p><strong>Monday:</strong><span id="Monday"></span><br>
+                    <strong>Tuesday:</strong><span id="Tuesday"></span><br>
+                    <strong>Wednesday:</strong><span id="Wednesday"></span><br>
+                    <strong>Thursday:</strong><span id="Thursday"></span><br>
+                    <strong>Friday:</strong><span id="Friday"></span><br>
+                    <strong>Saturday:</strong><span id="Saturday"></span><br>
+                    <strong>Sunday:</strong><span id="Sunday"></span><br>
+                </p>
+                <button onclick=makeSchedule()>Re-Create</button>
+            </div>
+        </section>
+
+        <section class="section-calories js--calories">
+            
+            <h1>Calories Today?</h1>
+            
+            <div class="input-calories">
+                <h2>Menu: </h2><input type="text" id="food-name">
+                <h2>Calories: </h2><input type="number" id="food-calories">
+                <h2>Protein: </h2><input type="number" id="food-protein"><br>
+                <button onclick=addFood()>Add Food</button>
+                <button onclick=clearFood()>Clear</button>
+                <p><span id="food-note"></span></p>
+            </div>
+            
+            <button id="calcal-btn" onclick=calCal()>Calculate Calories and Protein</button>
+            
+            <div class="cal-cal">
+                <h2>All Calories: <span id=all-calories></span> cals</h2>
+                <h2>All Protein: <span id=all-protein></span> grams</h2>
+            </div>
+            
+        </section>
+        
+        <script src="resources/js/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="resources/js/scroll.js"></script>
+    
+    </body>
+    
+</html>

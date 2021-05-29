@@ -1,0 +1,149 @@
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+    color: #000;
+    font-family: 'Arial', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+/* ----------------------------------------------- */
+/* Header */
+/* ----------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.welcome {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.btn:link,
+.btn:visited {
+    margin-top: 20px;
+    color: #ffffff;
+    padding: 15px 10px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5%;
+    transition: background-color 1s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000;
+}
+
+/* ----------------------------------------------- */
+/* Workout Shedule */
+/* ----------------------------------------------- */
+
+.section-schedule {
+    background-color: #e2e2e2;
+    padding: 50px;
+    /* background-size: cover; */
+    padding-left: 30%;
+}
+
+.muscle-checkboxes {
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 120%;
+    color: #3c3c3c;
+}
+
+.muscle-checkboxes select {
+    margin-left: 10px;
+}
+
+.schedule-result {
+    visibility: hidden;
+}
+
+.section-schedule input {
+    margin: 10px;
+}
+
+.section-schedule button {
+    margin-top: 20px;
+    padding: 5px;
+    display: block;
+}
+
+.section-schedule p,
+.section-schedule h2 {
+    line-height: 200%;
+}
+
+.schedule-result span {
+    margin-left: 10px;
+}
+
+span.rest {
+    color: red;
+}
+
+/* ----------------------------------------------- */
+/* Calories */
+/* ----------------------------------------------- */
+
+.section-calories {
+    background-color: #b7b7b7;
+    padding: 50px;
+    /* height: 100vh; */
+    padding-left: 30%;
+}
+
+.input-calories input {
+    margin-bottom: 20px;
+}
+
+.input-calories button {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.input-calories #food-note {
+    line-height: 180%;
+}
+
+.section-calories .cal-cal {
+    visibility: hidden;
+}
+
+#calcal-btn {
+    margin: 30px 0;
+    padding: 5px;
+}
+
+.cal-cal h2 {
+    margin-bottom: 30px;
+}
