@@ -25,7 +25,7 @@ const planWorkout = () => {
 
     //In case that no muscle is checked
     if (muscleArray.length <= 0) {
-        alert("Please Select at least One Muscle.");
+        alert("Please select at least one muscle");
     }
 
     //there is some muscle checked.
@@ -119,7 +119,7 @@ const addFood = () => {
 
     //not all blanks are filled.
     if (document.querySelector("#food-name").value == "") {
-        alert("Menu Name missed.");
+        alert("MENU NAME missed");
     }
 
     else {
@@ -128,16 +128,10 @@ const addFood = () => {
         const nameInput = document.querySelector("#food-name").value;
         const calInput = document.querySelector("#food-calories").value;
         const proteinInput = document.querySelector("#food-protein").value;
-        foodArray[counter] = {name: "", calories: 0, protein: 0};
+        foodArray[counter] = {};
         foodArray[counter].name = nameInput;
-        if (calInput != "") {
-            foodArray[counter].calories = parseInt(calInput);
-        }
-        if (proteinInput != "") {
-            foodArray[counter].protein = parseInt(proteinInput);
-        }
-
-        
+        foodArray[counter].calories = (calInput != "") ? parseInt(calInput) : 0;
+        foodArray[counter].protein = (proteinInput != "") ? parseInt(proteinInput) : 0;
 
         //making a note of all food taken
         foodNote = foodNote + "<strong>Menu:</strong> "+ foodArray[counter].name +
