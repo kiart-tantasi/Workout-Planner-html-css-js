@@ -154,7 +154,7 @@ const clearFood = () => {
     counter = 0;
     foodNote = "";
     document.querySelector(".input-calories span").innerHTML = foodNote;
-    document.querySelector(".cal-cal").style.display = "block";
+    document.querySelector(".cal-cal").style.display = "none";
     
 }
 
