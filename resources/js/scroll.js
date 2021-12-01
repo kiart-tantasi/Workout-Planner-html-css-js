@@ -8,7 +8,4 @@ $(document).ready(function() {
     $('.js--scroll-to-calories').click(function () {
        $('html, body').animate({scrollTop: $('.js--calories').offset().top}, 1000); 
     });
-  
-    
-
 });

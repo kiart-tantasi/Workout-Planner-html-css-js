@@ -5,7 +5,7 @@
 const makeSchedule = () => {
     setTimeout(() => {
         planWorkout();
-    }, 300);
+    }, 200);
 }
 
 const planWorkout = () => {
@@ -101,7 +101,7 @@ const planWorkout = () => {
         }
 
         //show the result 
-        document.querySelector(".schedule-result").style.visibility = "visible";
+        document.querySelector(".schedule-result").style.display = "block";
 
     }
 
@@ -154,7 +154,7 @@ const clearFood = () => {
     counter = 0;
     foodNote = "";
     document.querySelector(".input-calories span").innerHTML = foodNote;
-    document.querySelector(".section-calories .cal-cal").style.visibility = "hidden";
+    document.querySelector(".cal-cal").style.display = "block";
     
 }
 
@@ -168,7 +168,7 @@ let allProtein = 0;
     }
     document.querySelector("#all-calories").innerHTML = allCalories;
     document.querySelector("#all-protein").innerHTML = allProtein;
-    document.querySelector(".section-calories .cal-cal").style.visibility = "visible";
+    document.querySelector(".cal-cal").style.display = "block";
 }
 
 

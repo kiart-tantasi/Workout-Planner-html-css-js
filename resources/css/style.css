@@ -82,6 +82,7 @@ header h1 {
 /* ----------------------------------------------- */
 
 .section-schedule {
+    min-height: 100vh;
     padding: 50px;
     padding-left: 30%;
     background-color: #F9F9F9;
@@ -103,7 +104,7 @@ header h1 {
 }
 
 .schedule-result {
-    visibility: hidden;
+    display: none;
 }
 
 .section-schedule input {
@@ -132,6 +133,7 @@ span.rest {
 /* ----------------------------------------------- */
 
 .section-calories {
+    min-height: 100vh;
     background-color: #F2F2F2;
     padding: 50px;
     padding-left: 30%;
@@ -150,8 +152,9 @@ span.rest {
     line-height: 200%;
     margin-bottom: 20px;
 }
-.section-calories .cal-cal {
-    visibility: hidden;
+
+.cal-cal {
+    display: none;
 }
 
 .cal-cal h2 {

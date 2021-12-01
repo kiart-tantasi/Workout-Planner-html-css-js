@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>        
-        
+    <head>  
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
         <title>Workout Schedule Planner</title>
-        
     </head>
     
     <body>
+        <!-- HEAD -->
         <header>
             <div class="welcome">
                 <h1>Plan Your Workout and Count Calories</h1>
@@ -19,6 +21,7 @@
                 <a href="#" class="btn js--scroll-to-calories">Calculate Calories for Today</a>
             </div>
         </header>
+        <!-- SECTION 1 -->
         <section class="section-schedule js--schedule">
             <h1>About your Schedule?</h1>
             <div class="muscle-checkboxes">
@@ -56,7 +59,7 @@
                 <button onclick=makeSchedule() class="re-create">Re-Create</button>
             </div>
         </section>
-
+        <!-- SECTION 2 -->
         <section class="section-calories js--calories">
             
             <h1>Calories Today?</h1>
@@ -73,8 +76,8 @@
             <button id="calcal-btn" onclick=calCal()>Calculate Calories and Protein</button>
             
             <div class="cal-cal">
-                <h2>All Calories: <span id=all-calories></span> cals</h2>
-                <h2>All Protein: <span id=all-protein></span> grams</h2>
+                <h2>All Calories: <span id=all-calories></span> Calories</h2>
+                <h2>All Protein: <span id=all-protein></span> Grams</h2>
             </div>
             
         </section>
