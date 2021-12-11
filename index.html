@@ -69,8 +69,8 @@
             
             <div class="input-calories">
                 <h2>Menu: </h2><input type="text" id="food-name">
-                <h2>Calories: </h2><input type="number" id="food-calories">
-                <h2>Protein: </h2><input type="number" id="food-protein"><br>
+                <h2>Calories: </h2><input type="number" min="0" step="100" id="food-calories">
+                <h2>Protein: </h2><input type="number" min="0" step="10" id="food-protein"><br>
                 <button onclick=addFood()>Add Food</button>
                 <button onclick=clearFood()>Clear</button>
                 <p class="food-note"><span></span></p>
