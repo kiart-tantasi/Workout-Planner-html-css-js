@@ -162,3 +162,11 @@ span.rest {
 .cal-cal h2 {
     margin-bottom: 30px;
 }
+
+.break-menu {
+    display: none;
+}
+
+.break-menu-sum {
+    display: none;
+}

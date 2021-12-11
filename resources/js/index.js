@@ -135,8 +135,8 @@ const addFood = () => {
 
         //making a note of all food taken
         foodNote = foodNote + "<strong>Menu:</strong> "+ foodArray[counter].name +
-        ", <strong>Calories:</strong> " + foodArray[counter].calories +
-        ", <strong>Protein:</strong> " + foodArray[counter].protein + "<br>";
+        "  <br class='break-menu'><strong>Calories:</strong> " + foodArray[counter].calories +
+        " <strong>Protein:</strong> " + foodArray[counter].protein + "<br>";
         document.querySelector(".food-note span").innerHTML = foodNote;
 
         counter++

@@ -46,10 +46,10 @@
                     <option value="Sunday">Sunday</option>
                 </select></p>
                 
-                <button onclick=makeSchedule()>Create Workout Schedule</button>
+                <button class="js--scroll-to-result" onclick=makeSchedule()>Create Workout Schedule</button>
             </div>
             
-            <div class="schedule-result">
+            <div class="schedule-result js--schedule-result">
                 <h2>Here's Your Schedule</h2>
                 <p><strong>Monday:</strong><span id="Monday"></span><br>
                     <strong>Tuesday:</strong><span id="Tuesday"></span><br>
@@ -76,11 +76,11 @@
                 <p class="food-note"><span></span></p>
             </div>
             
-            <button id="calcal-btn" onclick=calCal()>Calculate Calories and Protein</button>
+            <button id="calcal-btn" class="js--scroll-to-cal-cal" onclick=calCal()>Calculate Calories and Protein</button>
             
-            <div class="cal-cal">
-                <h2>All Calories: <span id=all-calories></span> Calories</h2>
-                <h2>All Protein: <span id=all-protein></span> Grams</h2>
+            <div class="cal-cal js--cal-cal">
+                <h2>All Calories <br class="break-menu-sum"><span id="all-calories"></span> Cals</h2>
+                <h2>All Protein <br class="break-menu-sum"><span id="all-protein"></span> Grams</h2>
             </div>
             
         </section>
