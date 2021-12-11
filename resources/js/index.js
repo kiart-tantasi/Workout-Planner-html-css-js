@@ -119,7 +119,7 @@ const addFood = () => {
 
     //not all blanks are filled.
     if (document.querySelector("#food-name").value == "") {
-        alert("MENU NAME missed");
+        alert("Please define the name of the menu");
     }
 
     else {
