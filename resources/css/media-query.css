@@ -1,5 +1,9 @@
 @media (max-width:767px) {
 
+    .welcome {
+        padding-top: 100px;
+    }
+
     .main-btn-container {
         width: 400px;
         max-width: 80%;
@@ -12,10 +16,10 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
 
-    .main-text {
-        font-size: 1.5rem;
+    .break-main-text-1, .break-main-text-2 {
+        display: block;        
     }
 
 }

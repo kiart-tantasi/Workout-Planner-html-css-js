@@ -75,7 +75,9 @@ header h1 {
     color: #000;
 }
 
-
+.break-main-text-1, .break-main-text-2 {
+    display: none;
+}
 
 /* ----------------------------------------------- */
 /* Workout Shedule */
