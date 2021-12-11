@@ -17,9 +17,17 @@
 
 
 @media (max-width: 650px) {
-
     .break-main-text-1, .break-main-text-2 {
         display: block;        
     }
 
+    .section-schedule, .section-calories {
+        padding-left: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-schedule, .section-calories {
+        padding-left: 20%;
+    }
 }
