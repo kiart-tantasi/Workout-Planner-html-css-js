@@ -1,0 +1,21 @@
+@media (max-width:767px) {
+
+    .main-btn-container {
+        width: 400px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .main-btn {
+        display: block;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .main-text {
+        font-size: 1.5rem;
+    }
+
+}
