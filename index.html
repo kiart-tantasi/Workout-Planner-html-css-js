@@ -66,15 +66,17 @@
         <section class="section-calories js--calories">
             
             <h1>Calories Today?</h1>
-            
-            <div class="input-calories">
-                <h2>Menu: </h2><input type="text" id="food-name">
-                <h2>Calories: </h2><input type="number" min="0" step="100" id="food-calories">
-                <h2>Protein: </h2><input type="number" min="0" step="10" id="food-protein"><br>
-                <button onclick=addFood()>Add Food</button>
-                <button onclick=clearFood()>Clear</button>
-                <p class="food-note"><span></span></p>
-            </div>
+
+            <form class="cal-form">
+                <div class="input-calories">
+                    <h2>Menu: </h2><input type="text" id="food-name">
+                    <h2>Calories: </h2><input type="number" min="0" id="food-calories">
+                    <h2>Protein: </h2><input type="number" min="0" id="food-protein"><br>
+                    <button type="submit">Add Food</button>
+                    <button type="button" onclick=clearFood()>Clear</button>
+                    <p class="food-note"><span></span></p>
+                </div>
+            </form>
             
             <button id="calcal-btn" class="js--scroll-to-cal-cal" onclick=calCal()>Calculate Calories and Protein</button>
             

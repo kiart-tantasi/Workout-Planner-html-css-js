@@ -123,11 +123,13 @@ let foodArray = [];
 let counter = 0;
 let foodNote = "";
 
-const addFood = () => {
+const addFood = (e) => {
+    e.preventDefault();
 
-    //not all blanks are filled.
+    //food name is not defined
     if (document.querySelector("#food-name").value == "") {
         alert("Please define the name of the menu");
+        return;
     }
 
     else {
@@ -150,11 +152,18 @@ const addFood = () => {
         counter++
 
         //clear the blank
-        document.querySelector("#food-name").value = "";
+        const foodName = document.querySelector("#food-name")
+        foodName.value = "";
+        foodName.focus();
         document.querySelector("#food-calories").value = "";    
         document.querySelector("#food-protein").value = "";
+
     }
 }
+
+// handle form submitting
+const calForm = document.querySelector(".cal-form")
+calForm.addEventListener("submit", addFood);
 
 //Clear everything
 const clearFood = () => {
