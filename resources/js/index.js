@@ -2,15 +2,16 @@
 // Schedule Section //
 //------------------//
 
+let prev = ["mutable", "array"];
+
 const makeSchedule = () => {
     setTimeout(() => {
         planWorkout();
-    }, 200);
+    }, 100);
 }
 
 const planWorkout = () => {
-
-
+    let resultArray = [];
 
     //make an array for the muscles that are checked on checkboxes.
     const muscleArray = ['Chest','Back','Legs','Shoulder','Biceps','Triceps','Abs'];
@@ -21,10 +22,10 @@ const planWorkout = () => {
         }
     }
 
-    let resultArray = [];
-
+    //number of muscle parts checked
+    const checkedNumber = muscleArray.length;
     //In case that no muscle is checked
-    if (muscleArray.length <= 0) {
+    if (checkedNumber <= 0) {
         alert("Please select at least one muscle");
     }
 
@@ -33,7 +34,7 @@ const planWorkout = () => {
 
         let restOrNot = false;
         
-        for (i=0;i<7;i++) {
+        for (let i = 0; i < 7; i++) {
 
             //when array is empty || rest is needed after big muscle day
             if (muscleArray.length <= 0 || restOrNot == true) {
@@ -86,6 +87,14 @@ const planWorkout = () => {
             }
         }
 
+        //if got the same result, run the function again!
+        const joinedPrev = prev.join("");;
+        const joinedResult = resultArray.join("");
+        prev = resultArray; // save for comparing in the next time
+        if (joinedPrev === joinedResult && checkedNumber >= 2) {
+            return planWorkout();
+        }
+
         //change the first day of workout.
         let allDaysInWeek = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
         let firstDay = document.querySelector("#firstday").value;
@@ -102,7 +111,6 @@ const planWorkout = () => {
 
         //show the result 
         document.querySelector(".schedule-result").style.display = "block";
-
     }
 
 }
