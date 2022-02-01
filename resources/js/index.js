@@ -87,11 +87,14 @@ const planWorkout = () => {
             }
         }
 
+
         //if got the same result, run the function again!
-        const joinedPrev = prev.join("");;
-        const joinedResult = resultArray.join("");
+        const joinedPrev = prev.filter(x => x !== "<em>-rest-</em>").join("");;
+        const joinedResult = resultArray.filter(x => x !== "<em>-rest-</em>").join("");
+
         prev = resultArray; // save for comparing in the next time
         if (joinedPrev === joinedResult && checkedNumber >= 2) {
+            console.log("same.");
             return planWorkout();
         }
 
