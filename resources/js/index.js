@@ -94,7 +94,6 @@ const planWorkout = () => {
 
         prev = resultArray; // save for comparing in the next time
         if (joinedPrev === joinedResult && checkedNumber >= 2) {
-            console.log("same.");
             return planWorkout();
         }
 
